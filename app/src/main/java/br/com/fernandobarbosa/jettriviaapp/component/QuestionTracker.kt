@@ -13,6 +13,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.fernandobarbosa.jettriviaapp.util.AppColors
+import br.com.fernandobarbosa.jettriviaapp.util.FontSizes
 
 @Composable
 fun QuestionTracker(counter: Int = 10, outOf: Int = 1000) {
@@ -26,7 +27,7 @@ fun QuestionTracker(counter: Int = 10, outOf: Int = 1000) {
                 style = SpanStyle(
                     color = AppColors.mLightGray,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 27.sp
+                    fontSize = FontSizes.large
                 )
             ) {
                 append("Question $counter/")
@@ -34,7 +35,7 @@ fun QuestionTracker(counter: Int = 10, outOf: Int = 1000) {
                     style = SpanStyle(
                         color = AppColors.mLightGray,
                         fontWeight = FontWeight.Light,
-                        fontSize = 14.sp
+                        fontSize = FontSizes.medium
                     )
                 ) {
                     append("$outOf")

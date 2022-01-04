@@ -19,9 +19,9 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import br.com.fernandobarbosa.jettriviaapp.model.QuestionItem
 import br.com.fernandobarbosa.jettriviaapp.util.AppColors
+import br.com.fernandobarbosa.jettriviaapp.util.FontSizes
 import br.com.fernandobarbosa.jettriviaapp.viewmodel.QuestionsViewModel
 
 @Composable
@@ -113,7 +113,7 @@ fun QuestionDisplay(
                                 )
                         )
 
-                        val annotadedString = buildAnnotatedString {
+                        val annotatedString = buildAnnotatedString {
                             withStyle(
                                 style = SpanStyle(
                                     fontWeight = FontWeight.Light,
@@ -124,13 +124,13 @@ fun QuestionDisplay(
                                         Color.Red
                                         else
                                             AppColors.mOffWhite,
-                                    fontSize = 16.sp
+                                    fontSize = FontSizes.medium
                                 )
                             ) {
                                 append(answerText)
                             }
                         }
-                        Text(text = annotadedString, modifier = Modifier.padding(6.dp))
+                        Text(text = annotatedString, modifier = Modifier.padding(6.dp))
                     }
                 }
 
@@ -153,7 +153,7 @@ fun QuestionDisplay(
                         text = "Next",
                         modifier = Modifier.padding(4.dp),
                         color = AppColors.mOffWhite,
-                        fontSize = 16.sp
+                        fontSize = FontSizes.medium
                     )
                 }
             }
